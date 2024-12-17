@@ -14,22 +14,19 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/**
- * This file contains the version information for the helix feedback plugin
- *
- * @package   assignfeedback_helixfeedback
- * @copyright 2014 Streaming LTD http://www.streaming.co.uk
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * @author    Tim Williams (tmw@autotrain.org) for Streaming LTD
- */
+namespace assignfeedback_helixfeedback\privacy;
 
-defined('MOODLE_INTERNAL') || die();
+class provider implements
+    // This plugin does not store any personal user data.
+    \core_privacy\local\metadata\null_provider {
 
-$plugin->version   = 2024120901;
-$plugin->requires  = 2022112800;
-$plugin->component = 'assignfeedback_helixfeedback';
-$plugin->release = '8.5.19e';
-$plugin->dependencies = array(
-    'mod_helixmedia' => '2024120901'
-);
-$plugin->supported = [401, 405];
+    /**
+     * Get the language string identifier with the component's language
+     * file to explain why this plugin stores no data.
+     *
+     * @return  string
+     */
+    public static function get_reason() : string {
+        return 'privacy:metadata';
+    }
+}
