@@ -23,8 +23,6 @@
  * @author    Tim Williams (tmw@autotrain.org) for Streaming LTD
  */
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Stub for upgrade code
  * @param int $oldversion

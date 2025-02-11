@@ -23,8 +23,6 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Class for backup of this feedback plugin
  * @copyright 2014 Streaming LTD
@@ -41,14 +39,14 @@ class backup_assignfeedback_helixfeedback_subplugin extends backup_subplugin {
         // Create XML elements.
         $subplugin = $this->get_subplugin_element();
         $subpluginwrapper = new backup_nested_element($this->get_recommended_name());
-        $subpluginelement = new backup_nested_element('feedback_helixfeedback', null, array('preid', 'servicesalt', 'grade'));
+        $subpluginelement = new backup_nested_element('feedback_helixfeedback', null, ['preid', 'servicesalt', 'grade']);
 
         // Connect XML elements into the tree.
         $subplugin->add_child($subpluginwrapper);
         $subpluginwrapper->add_child($subpluginelement);
 
         // Set source to populate the data.
-        $subpluginelement->set_source_table('assignfeedback_helixfeedback', array('grade' => backup::VAR_PARENTID));
+        $subpluginelement->set_source_table('assignfeedback_helixfeedback', ['grade' => backup::VAR_PARENTID]);
 
         return $subplugin;
     }
