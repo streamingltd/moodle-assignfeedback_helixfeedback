@@ -37,7 +37,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        include:
           - php: 8.4
             moodle-branch: MOODLE_500_STABLE
             database: mariadb
