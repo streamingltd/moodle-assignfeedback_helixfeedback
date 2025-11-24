@@ -25,7 +25,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$settings->add(new admin_setting_configcheckbox('assignfeedback_helixfeedback/default',
+$settings->add(new admin_setting_configcheckbox(
+    'assignfeedback_helixfeedback/default',
     new lang_string('default', 'assignfeedback_helixfeedback'),
-    new lang_string('default_help', 'assignfeedback_helixfeedback'), 1));
-
+    new lang_string('default_help', 'assignfeedback_helixfeedback'),
+    1
+));

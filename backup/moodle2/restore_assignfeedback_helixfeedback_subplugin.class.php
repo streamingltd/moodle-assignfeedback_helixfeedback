@@ -30,7 +30,6 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class restore_assignfeedback_helixfeedback_subplugin extends restore_subplugin {
-
     /**
      * Returns the paths to be handled by the subplugin at workshop level
      * @return array

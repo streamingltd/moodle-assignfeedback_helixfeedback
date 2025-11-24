@@ -29,7 +29,6 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class backup_assignfeedback_helixfeedback_subplugin extends backup_subplugin {
-
     /**
      * Returns the subplugin information to attach to submission element
      * @return backup_subplugin_element
